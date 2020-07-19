@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+
+<body>
+    <script>
+        let mtk = 80;
+        const bahasaIndonesia = 90;
+        const bahasaInggris = 89;
+        const ipa = 69;
+        let rataRata;
+
+        if (mtk != null && bahasaIndonesia != null && bahasaInggris != null && ipa != null) {
+            if (typeof (mtk) == "number" && typeof (bahasaIndonesia) == "number" && typeof (bahasaInggris) ==
+                "number" && typeof (ipa) == "number") {
+                rataRata = (mtk + bahasaIndonesia + bahasaInggris + ipa) / 4;
+                if (rataRata < 59) {
+                    console.log(`Nilai rata-rata = ${rataRata}
+                    Grade = E`);
+                } else if (rataRata < 69) {
+                    console.log(`Nilai rata-rata = ${rataRata}
+                    Grade = D`);
+                } else if (rataRata < 79) {
+                    console.log(`Nilai rata-rata = ${rataRata}
+                    Grade = C`);
+                } else if (rataRata < 89) {
+                    console.log(`Nilai rata-rata = ${rataRata}
+                    Grade = B`);
+                } else if (rataRata < 100) {
+                    console.log(`Nilai rata-rata = ${rataRata}
+                    Grade = A`);
+                }
+
+            } else {
+                console.log("Inputan harus angka");
+            }
+        } else {
+            console.log("semua nilai harus di isi");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4</title>
+</head>
+
+<body>
+    <script>
+        let data = {
+            id: 1,
+            name: "Leanne Graham",
+            username: "Bret",
+            email: "Sincere@april.biz",
+            address: {
+                street: "Kulas Light",
+                suite: "Apt. 556",
+                city: "Gwenborough",
+                zipcode: "92998-3874",
+            },
+            phone: "1-770-736-8031 x56442",
+            website: "hildegard.org",
+        }
+        let data2 = {
+            ...data
+        }
+        data2.name = "Hamdan Hamdani";
+        data2.email = "hamdan230598@gmail.com";
+        data2.hobby = "Bulutangkis";
+        document.write(`name : ${data2.name} <br> email : ${data2.email} <br>hobby : ${data2.hobby} <br>`);
+        let {
+            street,
+            city
+        } = data2.address;
+        document.write(`street : ${street} <br>city : ${city}`);
+    </script>
+</body>
+
+</html>
