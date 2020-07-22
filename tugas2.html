@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas2</title>
+</head>
+
+<body>
+    <script>
+        const names = [
+            'Abigail', 'Alexandra', 'Alison', 'Amanda', 'anggela',
+            'Bella', 'Carol', 'Caroline', 'Carolyn',
+            'Deirdre', 'Diana', 'Elizabeth',
+            'Ella', 'Faith', 'Olivia', 'Penelope'
+        ];
+
+        const searchName = (str, jml, callback) => {
+            const hslFilter = names.filter(name => name.includes(str));
+            console.log(hslFilter);
+            callback(hslFilter, jml);
+        }
+        const callback = (quote, limit) => console.log(quote.slice(0, limit));
+
+        searchName('an', 3, callback);
+    </script>
+</body>
+
+</html>

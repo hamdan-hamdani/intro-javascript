@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3</title>
+</head>
+
+<body>
+    <script>
+        const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
+            if (nilaiAwal < nilaiAkhir) {
+                if (dataArray.length > 5) {
+                    const dataArray2 = dataArray.filter(number => number > nilaiAwal && number < nilaiAkhir);
+                    console.log(dataArray2.sort((a, b) => a - b));
+                } else {
+                    console.log('Jumlah angka dalam dataArray harus lebih dari 5')
+                }
+            } else {
+                console.log('Nilai akhir harus lebih besar dari nilai awal');
+            }
+        }
+
+        seleksiNilai(2, 17, [4, 15, 14, 17, 30, 8])
+    </script>
+</body>
+
+</html>

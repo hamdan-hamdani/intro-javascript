@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+</head>
+
+<body>
+    <script>
+        // 1. Penjelasan method isArray() 
+        // method isArray() digunakan untuk mengecek apakah nilai nya array atau bukan jika nilainya array maka akan mengembalikan nilai true jika nilainya bukan array maka akan mengembalikan false
+
+        // contoh penggunaanya
+        const data = [1, 2, 3, "a", 5];
+        const data2 = "Hamdan";
+        console.log(Array.isArray(data));
+        console.log(Array.isArray(data2));
+
+        // 2. Penjelasan toUpperCase()
+        // method toUpperCase() digunakan untuk mengkonversi nilai string menjadi huruf besar
+
+        // contoh penggunaanya
+        const str = "halo nama saya hamdan";
+        console.log(str.toUpperCase());
+
+        // 3. Penjelasan method replace()
+        // method replace() memiliki dua buah parameter parameter pertama untuk kata yang dicari parameter kedua untuk kata pengganti, method replace() digunakan untuk mengganti nilai string lama menjadi nilai string baru
+
+        // contoh penggunaanya
+        const cariKata = 'saya';
+        console.log(str.replace(cariKata, 'Hamdani'));
+
+        // 4. Penjelasan method split()
+        // method split() digunakan untuk merubah nilai string menjadi array yang dipisahkan dengan separator
+
+        // contoh penggunaanya
+        const teks = "halo nama saya hamdan";
+        console.log(teks.split(" "))
+
+        // 5. Penjelasan method trim()
+        // method trim() digunakan untuk menghapus spasi dari ujung awal dan akhir
+
+        // contoh penggunaanya
+        const contohTrim = "    Hamdan      Hamdani     ";
+        console.log(contohTrim);
+        console.log(contohTrim.trim());
+
+        // 6. Penjelan method parseInt()
+        // method parseInt() digunakan untuk mengubah string menjadi integer
+
+        // contoh penggunaanya
+        const angka = "1";
+        console.log(parseInt(angka) + 5);
+        console.log(angka + 5);
+
+        // 7. Penjelasan method toString()
+        // method toString() digunakan untuk merubah nilai dari tipe data menjadi string
+
+        // contoh penggunaanya
+        const angka2 = {
+            umur: 22
+        };
+        console.log(angka2.umur.toString() + 10);
+        console.log(angka2.umur + 10);
+
+        // 8. Penjelasan method fill()
+        // method fill() digunakan untuk mengubah semua elemen array dari index awal hingga index akhir
+
+        // contoh penggunaanya
+        const newArray = [3, 2, 2, 5];
+        console.log(newArray.fill(10, 1));
+
+        // 9. Penjelasan method fillter()
+        // method fillter() digunakan untuk memfilter data array yang memenuhi kondisi dan akan membuat array baru
+
+        // contoh penggunaanya
+        const myArr = ['halo', 'saya', 'hamdan', 'hamdan'];
+        console.log(myArr.filter(e => e == 'hamdan'));
+
+        // 10. Penggunaan method find()
+        // method find() digunakan untuk mencari nilai dalam array tetapi hanya nilai yang pertama kali ditemukan  aja yang akan dikembalikan
+
+        // contoh penggunaanya         
+        console.log(myArr.find(e => e == 'hamdan'));
+    </script>
+</body>
+
+</html>
