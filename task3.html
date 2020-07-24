@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <script>
+        const names = [
+            'Abigail', 'Alexandra', 'Alison', 'Amanda', 'Anggela',
+            'Bella', 'Carol', 'Caroline', 'Carolyn',
+            'Deirdre', 'Diana', 'Elizabeth',
+            'Ella', 'Faith', 'Olivia', 'Penelope'
+        ];
+
+        const filterArray = (str, dataArray) => {
+            return new Promise((resolve, reject) => {
+                if (Array.isArray(dataArray) && dataArray.length > 0) {
+                    const resFilter = dataArray.filter(e => e.toUpperCase().includes(str
+                        .toUpperCase()))
+                    resolve(resFilter);
+                } else {
+                    reject(new Error('data harus array dan array tidak boleh kosong'));
+                }
+
+            })
+        }
+
+        // filterArray("an", []).then(e => console.log(e)).catch(e => console.log(e.message));
+
+        const replaceArray = (str, searcWord, newWord) => {
+            return new Promise((resolve, reject) => {
+                if (str != null) {
+                    const resReplace = str.replace(searcWord, newWord)
+                    resolve(resReplace);
+                } else {
+                    reject(new Error('string tidak boleh null'));
+                }
+
+            })
+        }
+
+        replaceArray(null, "saya", "Hamdani").then(e => console.log(e)).catch(e => console.log(e
+            .message));
+    </script>
+</body>
+
+</html>

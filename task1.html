@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <script>
+        const cekHariKerja = (day) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const dataDay = ['senin', 'selasa', 'rabu', 'kamis', 'jumat'];
+                    let cek = dataDay.find((item) => {
+                        return item === day
+                    })
+                    if (cek) {
+                        resolve(cek);
+                    } else {
+                        reject(new Error('Hari ini bukan hari kerja'))
+                    }
+                }, 3000);
+            });
+        }
+
+        // cekHariKerja('jumatt').then(res => console.log(res)).catch(err => console.log(err.message));
+
+        // penggunaan then catch untuk error handling promise
+        // then akan menghandle state fulfilled resolve() jika operasinya sukses
+        // sedangkan catch akan menghandle state rejected reject() jika operasinya gagal
+
+        const getData = async () => {
+            try {
+                const result = await cekHariKerja('jumat');
+                console.log(result)
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+        getData();
+
+        // penggunaan try catch untuk error handling async/await
+        // try berisi code javascript yang mungkin terjadi error
+        // catch akan menangkap error yang terjadi pada blok try
+    </script>
+</body>
+
+</html>
